@@ -2,7 +2,7 @@
 const mongoose = require('../db/connection')
 
 // IMPORT THE SCHEMA CLASS
-const Schema = moongose.Schema
+const Schema = mongoose.Schema
 
 // INSTANTIATE A NEW INSTANCE OF A SCHEMA CLASS
 const tweetSchema = new Schema(
