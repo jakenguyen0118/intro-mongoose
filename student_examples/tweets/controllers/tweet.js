@@ -78,4 +78,14 @@ const deleteOneById = () => {
 		})
 }
 
-deleteOneById()
+// deleteOneById()
+
+// FIND ONE AND UPDATE
+const findOneAndUpdate = () => {
+    Tweet.findOneAndUpdate({title: 'Vespa'}, {sponsored: true})
+        .then(updated => console.log('updated', updated))
+        .catch(err => console.log('err', err))
+        .finally(() => {db.close()})
+}
+
+// findOneAndUpdate()
