@@ -89,3 +89,12 @@ const findOneAndUpdate = () => {
 }
 
 // findOneAndUpdate()
+
+const query = Tweet.find({ likes: { $gte: 20 } }, 'title -_id')
+	.limit(2)
+	.sort('title')
+
+query.exec((err, tweets) => {
+	console.log(tweets)
+	db.close()
+})
